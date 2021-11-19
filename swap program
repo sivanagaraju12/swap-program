@@ -1,0 +1,31 @@
+//WAP for swapping between any data type using swap(void *a,void *b) api
+
+#include&lt;stdio.h&gt;
+void swap ( void *a, void *b )
+{
+int temp ;
+//int a=35,b=45;
+temp = *(int *)a ;
+*(int *)a = *(int *)b ;
+*(int *)b = temp ;
+
+}
+int main( )
+{
+int num1, num2 ;
+printf(&quot;Enter a value for num1:&quot;);
+scanf(&quot;%d&quot;,&amp;num1);
+printf(&quot;Enter a value for num2:&quot;);
+scanf(&quot;%d&quot;,&amp;num2);
+printf(&quot;Before swapping:&quot;);
+printf(&quot;\nnum1 value is %d&quot;, num1);
+printf(&quot;\nnum2 value is %d&quot;, num2);
+
+/*calling swap function*/
+swap( &amp;num1,&amp;num2 );
+printf(&quot;\nAfter swapping:&quot;);
+printf(&quot;\nnum1 value is %d&quot;, num1);
+printf(&quot;\nnum2 value is %d&quot;, num2);
+
+return 0;
+}
